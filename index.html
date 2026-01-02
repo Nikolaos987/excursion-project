@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excursion Planner</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <!-- Logo -->
+          <a href="/" class="logo">
+            <div class="logo-icon">🏔️</div>
+            <span class="logo-text desktop-only">Excursion Planner</span>
+            <span class="logo-text mobile-only">EP</span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links desktop-only">
+            <a href="/" class="nav-btn active">Home</a>
+            <a href="/pages/destinations.html" class="nav-btn">Destinations</a>
+            <a href="/generator" class="nav-btn">Trip Generator</a>
+            <a href="/favorites" class="nav-btn">
+              <i data-lucide="heart"></i>
+              Favorites
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-btn mobile-only" id="menuToggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="/" class="nav-btn active">Home</a>
+          <a href="/destinations" class="nav-btn">Destinations</a>
+          <a href="/generator" class="nav-btn">Trip Generator</a>
+          <a href="/favorites" class="nav-btn">
+            <i data-lucide="heart"></i>
+            Favorites
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg">
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <h1>Discover Bulgaria</h1>
+          <p>
+            Plan your perfect adventure through stunning landscapes, historic
+            sites, and hidden gems
+          </p>
+          <div class="hero-actions">
+            <a href="/destinations" class="btn primary">Explore Destinations</a>
+            <a href="/generator" class="btn outline">Plan Your Trip</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Welcome to Excursion Planner</h2>
+            <p>
+              Your ultimate guide to exploring Bulgaria's breathtaking
+              destinations. From the majestic Rila Mountains to the golden
+              beaches of the Black Sea coast, discover carefully curated
+              excursions tailored to your preferences and travel style.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="card">
+              <div class="icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <h3>100+ Destinations</h3>
+              <p>Popular spots and hidden treasures across Bulgaria</p>
+            </div>
+
+            <div class="card">
+              <div class="icon">
+                <i data-lucide="compass"></i>
+              </div>
+              <h3>Smart Planning</h3>
+              <p>AI-powered trip suggestions based on your needs</p>
+            </div>
+
+            <div class="card">
+              <div class="icon">
+                <i data-lucide="heart"></i>
+              </div>
+              <h3>Save Favorites</h3>
+              <p>Build your personal collection of dream destinations</p>
+            </div>
+
+            <div class="card">
+              <div class="icon">
+                <i data-lucide="calendar"></i>
+              </div>
+              <h3>Seasonal Guides</h3>
+              <p>Find the best destinations for any time of year</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How To Use -->
+      <section class="section muted">
+        <div class="container narrow">
+          <h2 class="center">How to Use</h2>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>Browse Destinations</h3>
+                <p>
+                  Explore our curated collection of Bulgarian destinations. Use
+                  filters to find places that match your interests, difficulty
+                  level, and travel season.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>Generate Your Itinerary</h3>
+                <p>
+                  Use our excursion generator to create personalized trip
+                  suggestions. Tell us how many days you have, who's traveling,
+                  and your fitness level.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>Save Your Favorites</h3>
+                <p>
+                  Click the heart icon on any destination or excursion to add it
+                  to your favorites list for easy access later.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div>
+                <h3>Plan & Enjoy</h3>
+                <p>
+                  Each destination includes nearby amenities like restaurants,
+                  gas stations, and pharmacies to help you prepare for your
+                  adventure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container center">
+          <h2>Ready to Start Your Adventure?</h2>
+          <p>
+            Discover the beauty and diversity of Bulgaria with personalized
+            recommendations
+          </p>
+          <a href="/destinations" class="btn secondary">Start Exploring</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>

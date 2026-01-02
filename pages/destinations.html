@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Destinations</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/destinations.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <!-- Logo -->
+          <a href="/" class="logo">
+            <div class="logo-icon">🏔️</div>
+            <span class="logo-text desktop-only">Excursion Planner</span>
+            <span class="logo-text mobile-only">EP</span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links desktop-only">
+            <a href="/" class="nav-btn active">Home</a>
+            <a href="/destinations" class="nav-btn">Destinations</a>
+            <a href="/generator" class="nav-btn">Trip Generator</a>
+            <a href="/favorites" class="nav-btn">
+              <i data-lucide="heart"></i>
+              Favorites
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-btn mobile-only" id="menuToggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="/" class="nav-btn active">Home</a>
+          <a href="/destinations" class="nav-btn">Destinations</a>
+          <a href="/generator" class="nav-btn">Trip Generator</a>
+          <a href="/favorites" class="nav-btn">
+            <i data-lucide="heart"></i>
+            Favorites
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="header">
+      <div class="container">
+        <h1>Explore Destinations</h1>
+        <p id="header-count"></p>
+      </div>
+    </section>
+
+    <main class="container page">
+      <!-- Search & Filters -->
+      <div class="filters">
+        <div class="search-row">
+          <div class="search-box">
+            <i data-lucide="search"></i>
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search destinations, cities, or activities..."
+            />
+          </div>
+          <button id="filtersBtn" class="btn outline">
+            <i data-lucide="filter"></i> Filters
+          </button>
+        </div>
+
+        <div id="filterPanel" class="filter-panel hidden">
+          <div class="filter-grid">
+            <div>
+              <label><i data-lucide="map-pin"></i> Region</label>
+              <select id="regionFilter"></select>
+            </div>
+
+            <div>
+              <label><i data-lucide="calendar"></i> Season</label>
+              <select id="seasonFilter">
+                <option value="all">All seasons</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="autumn">Autumn</option>
+                <option value="winter">Winter</option>
+              </select>
+            </div>
+
+            <div>
+              <label><i data-lucide="mountain"></i> Difficulty</label>
+              <select id="difficultyFilter">
+                <option value="all">All levels</option>
+                <option value="easy">Easy</option>
+                <option value="moderate">Moderate</option>
+                <option value="difficult">Difficult</option>
+              </select>
+            </div>
+
+            <div>
+              <label><i data-lucide="users"></i> Family Friendly</label>
+              <button id="familyBtn" class="btn outline">Any</button>
+            </div>
+          </div>
+
+          <div class="clear-row">
+            <button id="clearFilters" class="btn ghost">
+              <i data-lucide="x"></i> Clear all filters
+            </button>
+          </div>
+        </div>
+
+        <div id="activeFilters" class="active-filters"></div>
+      </div>
+
+      <p id="resultsCount" class="results"></p>
+
+      <div id="destinationsGrid" class="grid"></div>
+
+      <div id="emptyState" class="empty hidden">
+        <p>No destinations found</p>
+        <span>Try adjusting your filters or search query</span>
+        <button class="btn primary" onclick="clearAll()">
+          Clear all filters
+        </button>
+      </div>
+    </main>
+
+    <script src="/js/destinations.js"></script>
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>
