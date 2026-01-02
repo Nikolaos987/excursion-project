@@ -6,8 +6,8 @@
     <title>Explore Destinations</title>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/destinations.css" />
   </head>
   <body>
@@ -25,7 +25,7 @@
           <!-- Desktop Navigation -->
           <div class="nav-links desktop-only">
             <a href="/" class="nav-btn active">Home</a>
-            <a href="/destinations" class="nav-btn">Destinations</a>
+            <a href="/pages/destinations.html" class="nav-btn">Destinations</a>
             <a href="/generator" class="nav-btn">Trip Generator</a>
             <a href="/favorites" class="nav-btn">
               <i data-lucide="heart"></i>
@@ -133,7 +133,8 @@
       </div>
     </main>
 
-    <script src="/js/destinations.js"></script>
+    <script src="/data/destinations-data.js"></script>
+    <script type="module" src="/js/destinations.js"></script>
     <script src="/js/navbar.js"></script>
   </body>
 </html>

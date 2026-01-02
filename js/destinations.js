@@ -1,33 +1,6 @@
-lucide.createIcons();
+import { destinations } from "../data/destinations-data.js";
 
-const destinations = [
-  {
-    id: 1,
-    name: "Rila Monastery",
-    city: "Rila",
-    region: "Rila Mountains",
-    difficulty: "easy",
-    familyFriendly: true,
-    bestSeasons: ["spring", "summer", "autumn"],
-    description: "Historic monastery nestled in the Rila Mountains.",
-    imageUrl: "/placeholder.svg",
-    popular: true,
-    tags: ["culture", "history"],
-  },
-  {
-    id: 2,
-    name: "Seven Rila Lakes",
-    city: "Sapareva Banya",
-    region: "Rila Mountains",
-    difficulty: "moderate",
-    familyFriendly: false,
-    bestSeasons: ["summer"],
-    description: "Famous glacial lakes with breathtaking views.",
-    imageUrl: "/placeholder.svg",
-    popular: true,
-    tags: ["hiking", "nature"],
-  },
-];
+lucide.createIcons();
 
 const searchInput = document.getElementById("searchInput");
 const grid = document.getElementById("destinationsGrid");
@@ -35,7 +8,7 @@ const empty = document.getElementById("emptyState");
 const resultsCount = document.getElementById("resultsCount");
 const headerCount = document.getElementById("header-count");
 
-headerCount.textContent = `Discover ${destinations.length} amazing places across Bulgaria.`;
+headerCount.textContent = `Discover ${destinations.length} amazing places across Bulgaria. Use filters to find your perfect adventure.`;
 
 function render(list) {
   grid.innerHTML = "";
