@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excursion App - Register</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <h1>Join Bulgarian Adventures!</h1>
+      <p>Create your account to explore mountains, lakes, and charming towns.</p>
+      
+      <form id="registerForm">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username">
+          <div id="usernameError" class="error-msg"></div>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password">
+          <div id="passwordError" class="error-msg"></div>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password">
+          <div id="confirmPasswordError" class="error-msg"></div>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/register.js"></script>
+</body>
+</html>
