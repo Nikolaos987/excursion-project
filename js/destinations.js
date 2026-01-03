@@ -27,23 +27,27 @@ function render(list) {
 
     card.innerHTML = `
       <div class="card-image">
-  <img src="${d.imageUrl}" alt="${d.name}" />
+        <img src="${d.imageUrl}" alt="${d.name}" />
 
-  ${
-    d.popular
-      ? `<span class="badge badge-primary badge-popular">Popular</span>`
-      : ""
-  }
+        ${
+          d.popular
+            ? `<span class="badge badge-primary badge-popular">Popular</span>`
+            : ""
+        }
 
-  <button class="favorite-btn" aria-label="Add to favorites">
-    <i data-lucide="heart"></i>
-  </button>
-</div>
-
+        <button class="favorite-btn" aria-label="Add to favorites">
+          <i data-lucide="heart"></i>
+        </button>
+      </div>
 
       <div class="card-body">
         <h3>${d.name}</h3>
-        <p class="muted">${d.city}, ${d.region}</p>
+
+        <!-- Location (Map Pin) -->
+        <div class="card-location">
+          <i data-lucide="map-pin"></i>
+          <span>${d.city}, ${d.region}</span>
+        </div>
 
         <p class="muted">${d.description}</p>
 

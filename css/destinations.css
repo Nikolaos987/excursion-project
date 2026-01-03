@@ -274,3 +274,20 @@ select {
   color: var(--muted-text);
   font-size: 0.9rem;
 }
+
+/* Location (Map pin) */
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* muted foreground */
+  margin-top: 4px;
+}
+
+.card-location i {
+  width: 16px;
+  height: 16px;
+}
+
