@@ -213,3 +213,64 @@ select {
   text-align: center;
   padding: 4rem 1rem;
 }
+
+/* BADGES (Shadcn-like) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.badge-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.badge-outline {
+  border: 1px solid #e5e7eb;
+  color: var(--text);
+  background: white;
+}
+
+.badge-difficulty.easy {
+  background: rgba(34, 197, 94, 0.1);
+  color: #15803d;
+}
+
+.badge-difficulty.moderate {
+  background: rgba(234, 179, 8, 0.1);
+  color: #a16207;
+}
+
+.badge-difficulty.difficult {
+  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+}
+
+/* IMAGE BADGE POSITIONING */
+.card-image {
+  position: relative;
+}
+
+.badge-popular {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.muted {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+}

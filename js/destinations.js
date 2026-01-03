@@ -24,20 +24,49 @@ function render(list) {
   list.forEach((d) => {
     const card = document.createElement("div");
     card.className = "card";
+
     card.innerHTML = `
-      <img src="${d.imageUrl}">
+      <div class="card-image">
+        <img src="${d.imageUrl}" alt="${d.name}" />
+
+        ${
+          d.popular
+            ? `<span class="badge badge-primary badge-popular">Popular</span>`
+            : ""
+        }
+      </div>
+
       <div class="card-body">
         <h3>${d.name}</h3>
-        <p>${d.city}, ${d.region}</p>
-        <p>${d.description}</p>
-        <span class="badge">${d.difficulty}</span>
+        <p class="muted">${d.city}, ${d.region}</p>
+
+        <p class="muted">${d.description}</p>
+
+        <div class="badges-row">
+          <span class="badge badge-difficulty ${d.difficulty}">
+            ${d.difficulty}
+          </span>
+
+          ${
+            d.familyFriendly
+              ? `<span class="badge badge-outline">
+                  <i data-lucide="users"></i>
+                  Family Friendly
+                </span>`
+              : ""
+          }
+        </div>
       </div>
+
       <div class="card-footer">
         <button class="btn primary">View Details</button>
       </div>
     `;
+
     grid.appendChild(card);
   });
+
+  lucide.createIcons();
 }
 
 const filtersBtn = document.getElementById("filtersBtn");
