@@ -65,6 +65,12 @@ body {
   gap: 4px;
 }
 
+.nav-links a.active {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
 .nav-btn {
   display: inline-flex;
   align-items: center;
