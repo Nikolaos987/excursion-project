@@ -18,22 +18,41 @@
     <nav class="navbar">
       <div class="container">
         <div class="nav-inner">
+          <!-- Logo -->
           <a href="/" class="logo">
             <div class="logo-icon">🏔️</div>
             <span class="logo-text desktop-only">Excursion Planner</span>
             <span class="logo-text mobile-only">EP</span>
           </a>
 
+          <!-- Desktop Navigation -->
           <div class="nav-links desktop-only">
-            <a href="/" class="nav-btn">Home</a>
-            <a href="/pages/destinations.html" class="nav-btn active"
-              >Destinations</a
+            <a href="/" class="nav-btn active">Home</a>
+            <a href="/pages/destinations.html" class="nav-btn">Destinations</a>
+            <a href="/pages/trip-generator.html" class="nav-btn"
+              >Trip Generator</a
             >
-            <a href="/generator" class="nav-btn">Trip Generator</a>
-            <a href="/favorites" class="nav-btn">
-              <i data-lucide="heart"></i> Favorites
+            <a href="/pages/favorites.html" class="nav-btn">
+              <i data-lucide="heart"></i>
+              Favorites
             </a>
           </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-btn mobile-only" id="menuToggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="/" class="nav-btn active">Home</a>
+          <a href="/destinations" class="nav-btn">Destinations</a>
+          <a href="/generator" class="nav-btn">Trip Generator</a>
+          <a href="/favorites" class="nav-btn">
+            <i data-lucide="heart"></i>
+            Favorites
+          </a>
         </div>
       </div>
     </nav>

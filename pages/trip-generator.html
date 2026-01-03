@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Generator</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/trip-generator.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <!-- Logo -->
+          <a href="/" class="logo">
+            <div class="logo-icon">🏔️</div>
+            <span class="logo-text desktop-only">Excursion Planner</span>
+            <span class="logo-text mobile-only">EP</span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links desktop-only">
+            <a href="/" class="nav-btn active">Home</a>
+            <a href="/pages/destinations.html" class="nav-btn">Destinations</a>
+            <a href="/pages/trip-generator.html" class="nav-btn"
+              >Trip Generator</a
+            >
+            <a href="/pages/favorites.html" class="nav-btn">
+              <i data-lucide="heart"></i>
+              Favorites
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-btn mobile-only" id="menuToggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="/" class="nav-btn active">Home</a>
+          <a href="/destinations" class="nav-btn">Destinations</a>
+          <a href="/generator" class="nav-btn">Trip Generator</a>
+          <a href="/favorites" class="nav-btn">
+            <i data-lucide="heart"></i>
+            Favorites
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="tg-header">
+      <div class="container">
+        <div class="header-row">
+          <i data-lucide="sparkles"></i>
+          <h1>Trip Generator</h1>
+        </div>
+        <p>
+          Answer a few questions and get personalized excursion recommendations
+          tailored to your needs.
+        </p>
+      </div>
+    </section>
+
+    <main class="container tg-main">
+      <div id="formCard" class="card">
+        <h2>Plan Your Perfect Adventure</h2>
+        <p class="muted">
+          Tell us about your trip and we'll suggest the best destinations for
+          you
+        </p>
+
+        <div class="form-group">
+          <label>
+            <i data-lucide="calendar"></i>
+            How many days do you have?
+          </label>
+          <input id="days" type="number" min="1" max="14" value="3" />
+          <small>Recommended: 2–7 days</small>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i data-lucide="users"></i>
+            How many people are traveling?
+          </label>
+          <input id="tourists" type="number" min="1" max="20" value="2" />
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i data-lucide="users"></i>
+            Are children traveling with you?
+          </label>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="children" value="yes" /> Yes</label
+            >
+            <label
+              ><input type="radio" name="children" value="no" checked />
+              No</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i data-lucide="mountain"></i>
+            What is your physical fitness level?
+          </label>
+
+          <div class="radio-card">
+            <input type="radio" name="physical" value="low" />
+            <div>
+              <strong>Low</strong>
+              <p>Prefer easy walks and minimal physical activity</p>
+            </div>
+          </div>
+
+          <div class="radio-card selected">
+            <input type="radio" name="physical" value="medium" checked />
+            <div>
+              <strong>Medium</strong>
+              <p>Can handle moderate hikes and some climbing</p>
+            </div>
+          </div>
+
+          <div class="radio-card">
+            <input type="radio" name="physical" value="high" />
+            <div>
+              <strong>High</strong>
+              <p>Ready for challenging trails and strenuous activities</p>
+            </div>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="btn primary large">
+          <i data-lucide="sparkles"></i>
+          Generate My Itinerary
+        </button>
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="hidden"></div>
+    </main>
+
+    <script src="/data/destinations-data.js"></script>
+    <script src="/data/routes-data.js"></script>
+    <script src="/js/trip-generator.js"></script>
+  </body>
+</html>
