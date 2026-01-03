@@ -27,14 +27,19 @@ function render(list) {
 
     card.innerHTML = `
       <div class="card-image">
-        <img src="${d.imageUrl}" alt="${d.name}" />
+  <img src="${d.imageUrl}" alt="${d.name}" />
 
-        ${
-          d.popular
-            ? `<span class="badge badge-primary badge-popular">Popular</span>`
-            : ""
-        }
-      </div>
+  ${
+    d.popular
+      ? `<span class="badge badge-primary badge-popular">Popular</span>`
+      : ""
+  }
+
+  <button class="favorite-btn" aria-label="Add to favorites">
+    <i data-lucide="heart"></i>
+  </button>
+</div>
+
 
       <div class="card-body">
         <h3>${d.name}</h3>
