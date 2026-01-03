@@ -116,3 +116,147 @@ input[type="number"] {
 .destination-item .content {
   padding: 1rem;
 }
+
+/* ---------- GENERATED CONTENT!!! ---------- */
+/* ---------- GENERATED CONTENT!!! ---------- */
+/* ---------- GENERATED CONTENT!!! ---------- */
+
+/* ---------- COLORS ---------- */
+:root {
+  /* --primary: #0f766e; */
+  --primary-foreground: #ffffff;
+  --muted: #f4f4f5;
+  --muted-text: #6b7280;
+}
+
+/* ---------- CARD VARIANTS ---------- */
+.card {
+  margin-top: 1.5rem;
+}
+
+.card-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.card h3 {
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- TEXT ---------- */
+.muted {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+}
+
+/* ---------- TIPS ---------- */
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tips-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.tips-list svg {
+  width: 18px;
+  color: var(--primary);
+  margin-top: 2px;
+}
+
+/* ---------- DESTINATIONS ---------- */
+.destination-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+  padding: 1rem;
+}
+
+.destination-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrap {
+  position: relative;
+  height: 160px;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-wrap .popular {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--primary);
+  color: white;
+}
+
+/* ---------- ROUTES ---------- */
+.routes-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.route-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* ---------- BADGES ---------- */
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.badge.easy {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.moderate {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.badge.difficult {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge.secondary {
+  background: #f1f5f9;
+}
+
+.badge.outline {
+  border: 1px solid #e5e7eb;
+  background: transparent;
+}
+
+/* ---------- ACTIONS ---------- */
+.actions {
+  margin-top: 2rem;
+}
