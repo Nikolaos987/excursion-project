@@ -1,5 +1,3 @@
-import { destinations } from "../data/destinations-data.js";
-
 lucide.createIcons();
 
 const params = new URLSearchParams(window.location.search);
