@@ -21,3 +21,27 @@ document.querySelectorAll(".mobile-menu .nav-btn").forEach((link) => {
     lucide.createIcons();
   });
 });
+
+// Avatar Dropdown Logic
+const avatarBtn = document.getElementById("avatarBtn");
+const avatarMenu = document.getElementById("avatarMenu");
+const avatarName = document.getElementById("avatarName");
+
+// Show username if stored
+const storedUser = localStorage.getItem("username");
+if (storedUser) {
+  avatarName.textContent = storedUser;
+}
+
+avatarBtn.addEventListener("click", () => {
+  avatarMenu.style.display =
+    avatarMenu.style.display === "flex" ? "none" : "flex";
+  avatarMenu.style.flexDirection = "column";
+});
+
+// Close dropdown if clicked outside
+document.addEventListener("click", (e) => {
+  if (!avatarBtn.contains(e.target) && !avatarMenu.contains(e.target)) {
+    avatarMenu.style.display = "none";
+  }
+});

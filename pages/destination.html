@@ -40,6 +40,19 @@
             </a>
           </div>
 
+          <!-- Avatar Dropdown -->
+          <div class="avatar-dropdown desktop-only">
+            <button id="avatarBtn" class="avatar-btn">
+              <div class="avatar-icon">👤</div>
+              <span id="avatarName">Guest</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div id="avatarMenu" class="dropdown-menu">
+              <a href="/pages/login.html" class="dropdown-item">Login</a>
+              <a href="/pages/register.html" class="dropdown-item">Register</a>
+            </div>
+          </div>
+
           <!-- Mobile Menu Button -->
           <button class="menu-btn mobile-only" id="menuToggle">
             <i data-lucide="menu"></i>
@@ -148,5 +161,6 @@
 
     <script src="/data/destinations-data.js"></script>
     <script src="/js/destination.js"></script>
+    <script src="/js/navbar.js"></script>
   </body>
 </html>

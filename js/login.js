@@ -33,6 +33,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   // Redirect if all valid
   if (isValid) {
+    // Save username for navbar
+    localStorage.setItem("username", username);
     window.location.href = "/";
   }
 });
