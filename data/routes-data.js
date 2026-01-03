@@ -1,4 +1,4 @@
-export const routes = [
+const routes = [
   {
     id: "r1",
     name: "Rila Mountain Adventure",

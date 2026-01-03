@@ -1,5 +1,3 @@
-import { destinations } from "../data/destinations-data.js";
-
 lucide.createIcons();
 
 const searchInput = document.getElementById("searchInput");
