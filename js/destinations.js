@@ -24,6 +24,11 @@ function render(list) {
   list.forEach((d) => {
     const card = document.createElement("div");
     card.className = "card";
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", () => {
+      window.location.href = `/pages/destination.html?id=${d.id}`;
+    });
 
     card.innerHTML = `
       <div class="card-image">
@@ -35,7 +40,7 @@ function render(list) {
             : ""
         }
 
-        <button class="favorite-btn" aria-label="Add to favorites">
+        <button class="favorite-btn" onclick="event.stopPropagation()" aria-label="Add to favorites">
           <i data-lucide="heart"></i>
         </button>
       </div>
@@ -67,9 +72,11 @@ function render(list) {
         </div>
       </div>
 
-      <div class="card-footer">
-        <button class="btn primary">View Details</button>
-      </div>
+      <button class="btn primary" onclick="event.stopPropagation(); window.location.href='/pages/destination.html?id=${
+        d.id
+      }'">
+        View Details
+      </button>
     `;
 
     grid.appendChild(card);

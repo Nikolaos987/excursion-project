@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/favorite-button.css" />
+    <link rel="stylesheet" href="/css/destination.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="/" class="logo">
+            <div class="logo-icon">🏔️</div>
+            <span class="logo-text desktop-only">Excursion Planner</span>
+            <span class="logo-text mobile-only">EP</span>
+          </a>
+
+          <div class="nav-links desktop-only">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/pages/destinations.html" class="nav-btn active"
+              >Destinations</a
+            >
+            <a href="/generator" class="nav-btn">Trip Generator</a>
+            <a href="/favorites" class="nav-btn">
+              <i data-lucide="heart"></i> Favorites
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <img id="heroImage" />
+      <div class="hero-gradient"></div>
+    </section>
+
+    <main class="container destination-wrapper">
+      <!-- Title Card -->
+      <section class="card destination-card">
+        <div class="card-header">
+          <div>
+            <div class="title-row">
+              <h1 id="name"></h1>
+              <span id="popularBadge" class="badge badge-primary hidden"
+                >Popular</span
+              >
+            </div>
+
+            <p class="location">
+              <i data-lucide="map-pin"></i>
+              <span id="location"></span>
+            </p>
+          </div>
+
+          <button class="favorite-btn">
+            <i data-lucide="heart"></i>
+          </button>
+        </div>
+
+        <p id="description" class="description"></p>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <i data-lucide="mountain"></i>
+            <div>
+              <span>Difficulty</span>
+              <strong id="difficulty"></strong>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <i data-lucide="users"></i>
+            <div>
+              <span>Family Friendly</span>
+              <strong id="family"></strong>
+            </div>
+          </div>
+
+          <div class="info-box wide">
+            <i data-lucide="calendar"></i>
+            <div>
+              <span>Best Seasons</span>
+              <strong id="seasons"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div id="tags" class="tags"></div>
+      </section>
+
+      <!-- Nearby Amenities -->
+      <section class="card">
+        <h2>Nearby Amenities</h2>
+        <p class="muted">Useful places close to this destination</p>
+
+        <div id="amenities" class="amenities-grid"></div>
+      </section>
+
+      <!-- Related Routes -->
+      <section id="routesSection" class="card">
+        <h2>Featured in Routes</h2>
+        <p class="muted">Excursions that include this destination</p>
+
+        <div id="routes"></div>
+      </section>
+
+      <!-- Actions -->
+      <div class="actions">
+        <a href="/generator" class="btn primary">
+          Plan Trip with This Destination
+        </a>
+        <a href="/pages/destinations.html" class="btn outline">
+          Back to All Destinations
+        </a>
+      </div>
+    </main>
+
+    <script src="/data/destinations-data.js"></script>
+    <script type="module" src="/js/destination.js"></script>
+  </body>
+</html>
